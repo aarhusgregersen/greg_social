@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'devise'
 gem 'faker'
 # gem 'paperclip'
-
+gem 'cancan'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
