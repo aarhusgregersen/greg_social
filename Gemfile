@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
+# gem 'paperclip'
+# gem 'figaro'
 gem 'devise'
 gem 'faker'
-# gem 'paperclip'
 gem 'cancan'
 
 
