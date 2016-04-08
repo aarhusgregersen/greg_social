@@ -1,28 +1,22 @@
-== README
+== Greg-social
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Greg-social is a simulated social network built to enhance my Ruby on Rails skills. This is based on a project over at the Odin Project found here: http://www.theodinproject.com/ruby-on-rails/final-project?ref=lc-pb.
+This will almost be a hard copy of todays version of facebook, if nothing else at least in terms of functionality
 
-Things you may want to cover:
+The application will take the following requirement and is built in order of appearence here:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Built with postgreSQL both in development and production
+2. App will differ between logged in and non-logged in users and serve different front/home pages. Non-logged in users will only be able to see the sign-up page. For existing users a facebook-like timeline will be served.
+3. App should have working friends system including friend requests that must be accepted.
+4. The app will include the notification area, initially only counting friend requests as events.
+5. Users on the app will be able create, comment and like posts
+6. Users will have a profile which includes a (gr)avatar
+7. Users will be able to sign up to Greg-social using their REAL facebook account
+8. Automated emails will be sent on account registration and in case users forgets their passwords.
+9. The app will be running on heroku and sending real emails through the SendGrid Heroku plugin.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+= Extras
+
+1. Ideally I want to add the ability for posts to be able to contain images with the paperclip gem
+2. I want to style it similarly to facebook with few exceptions using bootstrap or foundation
