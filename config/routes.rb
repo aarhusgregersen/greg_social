@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   resources :testpages
   devise_for :users
 
+  # authenticated :user do
+  #   root 'timeline#index', as: :authenticated_root
+  # end
+  #root "devise/registrations#new"
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,0 +1,39 @@
+== To-do list / Goals
+
+1. Set up mutual friend requests
+	- http://itsdn.co/mutual-friendship-rails
+	- Don't forget to change git branch
+2. Populate database with Faker gem so we can start testing
+3. Set up a navbar for the site, with icons for friend requests
+4. Set up notification area (essentially activating friend requests icon)
+5. Set up the classical facebook timeline as the frontpage
+	- May have to consider caching data entries in the view for this one
+6. Set up profiles that users can access and edit
+	- Each user has one profile and can access it through the normal edit actions
+	- Don't forget to enable profile pictures
+	- Start off with using gravatar and then eventually use paperclip
+7. Set up Omniauth to allow users to sign in with their real facebook account
+8. Set up mailer gem, and use letter_opener to test in development
+	- Use Herokus SendGrid add-on to send real emails through the mailer gem
+9.
+
+
+
+
+
+
+
+
+== Bugs / Less important
+
+1. Root is currently set as the same route for logged in and logged out
+2.
+
+
+
+== Extra credits / Least important
+
+1. Set up paperclip for images in posts. Remember polymorphic associations
+2. Style closely to real facebook
+3. Set up an admins area where certain log-ins will be able to manipulate close to any data entry
+4. Set up icons for messages and global notifications as per todays facebook
