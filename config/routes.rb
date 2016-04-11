@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'friends/index'
+
+  get 'friends/destroy'
+
+  resources :friend_requests
   root 'testpages#index'
   resources :testpages
   devise_for :users
