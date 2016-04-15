@@ -4,15 +4,17 @@ Rails.application.routes.draw do
   get 'friends/destroy'
 
   resources :friend_requests
-  root 'testpages#index'
   resources :testpages
   devise_for :users
 
-  # authenticated :user do
-  #   root 'timeline#index', as: :authenticated_root
-  # end
-  #root "devise/registrations#new"
-
+  devise_scope :user do
+    authenticated  do
+      root to: 'timeline#index', as: 'authenticated_user_root'
+    end
+    unauthenticated do
+      root to: 'devise/registrations#new', as: 'unauthenticated_user_root'
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
