@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   get 'friends/index'
-
   get 'friends/destroy'
 
-  resources :friend_requests
+  #resources :friend_requests
   resources :testpages
   devise_for :users
 
@@ -12,7 +11,7 @@ Rails.application.routes.draw do
       root to: 'timeline#index', as: 'authenticated_user_root'
     end
     unauthenticated do
-      root to: 'devise/registrations#new', as: 'unauthenticated_user_root'
+      root to: 'devise/sessions#new', as: 'unauthenticated_user_root'
     end
   end
 
