@@ -4,8 +4,8 @@
 	- http://itsdn.co/mutual-friendship-rails √
 	- Don't forget to change git branch √
 1.2 Set up views so we can test mutual relationships
-	- Generate devise views
-	- Set up the add function in the view
+	- Generate devise views √
+	- Use Jbuilder to set up create action in view
 2. Populate database with Faker gem so we can start testing √
 3. Set up a navbar for the site, with icons for friend requests
 4. Set up notification area (essentially activating friend requests icon)
