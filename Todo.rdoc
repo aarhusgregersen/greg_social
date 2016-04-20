@@ -6,9 +6,13 @@
 1.2 Set up views so we can test mutual relationships
 	- Generate devise views √
 	- Use Jbuilder to set up create action in view
+	- Set up notification area (essentially activating friend requests icon)
+	- Generate User controller with show action
+	- Set up action in routes
+		- http://stackoverflow.com/questions/7086583/creating-a-users-show-page-using-devise
+	- Make an 'add friend button on user show page'
 2. Populate database with Faker gem so we can start testing √
 3. Set up a navbar for the site, with icons for friend requests
-4. Set up notification area (essentially activating friend requests icon)
 5. Set up the classical facebook timeline as the frontpage
 	- May have to consider caching data entries in the view for this one
 6. Set up profiles that users can access and edit
@@ -40,4 +44,6 @@
 2. Style closely to real facebook
 	- Start with bootstrap and color it up
 3. Set up an admins area where certain log-ins will be able to manipulate close to any data entry
+	- Add boolean value to user table
+	- use cancan to check for the admin value in the table and allow actions if authorized
 4. Set up icons for messages and global notifications as per todays facebook

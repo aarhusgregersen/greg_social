@@ -2,9 +2,11 @@ source 'https://rubygems.org'
 
 # gem 'paperclip'
 # gem 'figaro'
+# gem 'font-awesome'
 gem 'devise'
 gem 'faker'
 gem 'cancan'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
