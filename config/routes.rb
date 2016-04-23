@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+
   get 'friends/index'
   get 'friends/destroy'
+  resources :friend_requests, :except => [:show, :edit]
 
   #resources :friend_requests
   resources :testpages
   devise_for :users
+  resources :users, :only => [:show]
 
   devise_scope :user do
     authenticated  do

@@ -1,0 +1,9 @@
+<h1>User id: <%= @user.id %></h1>
+<p>This users email is <%= @user.email %></p>
+
+
+<p>This user is currently one out of <b><%= @all.count %></b> users</p>
+
+<% unless current_user == @user %>
+	<%= link_to 'Add friend!', friend_request_path, method: 'post', remote: true %>
+<% end %>
