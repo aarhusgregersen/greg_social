@@ -12,7 +12,10 @@
     <ul class="nav navbar-nav navbar-right">
       <li><a href=" "><span class="glyphicon glyphicon-user"></span>User</a></li>
       <%= render 'layouts/notifications' %>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <% if user_signed_in? %>
+      <li><a href="#"></a> <%= current_user.email %> </li>
+      <li> <%= link_to 'Logout', destroy_user_session_path, method: 'delete'  %> </li>
+      <% end %>
     </ul>
   </div>
 </nav>

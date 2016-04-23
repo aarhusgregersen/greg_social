@@ -1,5 +1,6 @@
 class FriendsController < ApplicationController
   before_action :set_friend, only: :destroy
+  skip_authorization_check
 
   def index
     @friends = current_user.friends

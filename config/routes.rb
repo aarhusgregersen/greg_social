@@ -2,16 +2,18 @@ Rails.application.routes.draw do
 
   get 'friends/index'
   get 'friends/destroy'
-  resources :friend_requests, :except => [:show, :edit]
 
-  #resources :friend_requests
+  resources :friend do
+    resources :friend_requests, :except => [:show, :edit]
+  end
+
   resources :testpages
   devise_for :users
   resources :users, :only => [:show]
 
   devise_scope :user do
     authenticated  do
-      root to: 'timeline#index', as: 'authenticated_user_root'
+      root to: 'testpages#index', as: 'authenticated_user_root'
     end
     unauthenticated do
       root to: 'devise/sessions#new', as: 'unauthenticated_user_root'
