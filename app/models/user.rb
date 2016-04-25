@@ -13,4 +13,6 @@ class User < ActiveRecord::Base
   def remove_friend(friend)
     current_user.friends.destroy(friend)
   end
+
+
 end

@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   check_authorization :unless => :devise_controller?, only: [:new, :create]
 
   def friend_request_method
-  	@incoming = FriendRequest.where(friend: current_user)
-  	@outgoing = current_user.friend_requests
-	end
+    @incoming = FriendRequest.where(friend: current_user)
+    @outgoing = current_user.friend_requests
+  end
 end
