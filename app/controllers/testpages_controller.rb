@@ -1,6 +1,5 @@
 class TestpagesController < ApplicationController
   before_action :set_testpage, only: [:show, :edit, :update, :destroy]
-  skip_authorization_check
 
   # GET /testpages
   # GET /testpages.json

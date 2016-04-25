@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <%= link_to "Gregersen Social", "#"  %>
+      <%= link_to "Gregersen Social", "#", class: 'navbar-brand'  %>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"> <%= link_to "Edit", "#" %></li>
@@ -10,12 +10,9 @@
       <li><a href="#">Page 3</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href=" "><span class="glyphicon glyphicon-user"></span>User</a></li>
-      <%= render 'layouts/notifications' %>
-      <% if user_signed_in? %>
-      <li><a href="#"></a> <%= current_user.email %> </li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span><%= current_user.email %></a></li>
       <li> <%= link_to 'Logout', destroy_user_session_path, method: 'delete'  %> </li>
-      <% end %>
+      <%= render 'layouts/notifications' %>
     </ul>
   </div>
 </nav>

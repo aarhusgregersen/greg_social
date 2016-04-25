@@ -8,7 +8,7 @@
 	- Make an 'add friend button on user show page' √
 		- Use Jbuilder to set up ajax response for dynamic add.
 			- Flash. used as an alternative?
-	- Set up notification area (essentially activating friend requests icon)
+	- Set up notification area (essentially activating friend requests icon) √
 	- Generate User controller with show action √
 	- Set up action in routes
 		- http://stackoverflow.com/questions/7086583/creating-a-users-show-page-using-devise
@@ -23,8 +23,8 @@
 7. Set up Omniauth to allow users to sign in with their real facebook account
 8. Set up mailer gem, and use letter_opener to test in development
 	- Use Herokus SendGrid add-on to send real emails through the mailer gem
-9.
-
+9. Set up javascript so that we can have a drop-down list over whom the friend-requests are, within which we want to have accept/decline functions from the friend_requests controller
+10. Set up full-page friend request views
 
 
 
