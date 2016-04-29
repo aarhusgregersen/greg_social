@@ -2,8 +2,8 @@
 <p>You are currently friends with:</p>
 <% @friends.each do |friend|  %>
 <ul>
-
-<li><%= friend.id %> | <%= link_to "Remove this friend?", friends_destroy_path(friend_id), method: 'delete' %> </li>
+<li><%= friend.id %> | <%=  link_to "Remove this friend?", friends_destroy_path(@friend), method: 'delete' %> </li>
+<li><%= friend.email %></li>
 </ul>
 
 <% end %>
