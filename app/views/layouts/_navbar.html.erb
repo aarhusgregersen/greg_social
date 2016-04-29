@@ -1,7 +1,11 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <%= link_to "Gregersen Social", "#", class: 'navbar-brand'  %>
+    <% if user_signed_in? %>
+      <%= link_to "Gregersen Social", authenticated_user_root_path, class: 'navbar-brand' %>
+    <% else %>
+      <%= link_to "Gregersen Social", unauthenticated_user_root_path, class: 'navbar-brand'  %>
+    <% end %>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"> <%= link_to "Edit", "#" %></li>
@@ -10,9 +14,9 @@
       <li><a href="#">Page 3</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span><%= current_user.email %></a></li>
-      <li> <%= link_to 'Logout', destroy_user_session_path, method: 'delete'  %> </li>
       <%= render 'layouts/notifications' %>
+      <li><a href="<%= edit_user_path(current_user) %>"><%= current_user.email %></a></li>
+      <li> <%= link_to 'Logout', destroy_user_session_path, method: 'delete'  %> </li>
     </ul>
   </div>
 </nav>

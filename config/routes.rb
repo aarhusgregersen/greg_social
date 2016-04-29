@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :testpages
   devise_for :users
-  resources :users, :only => [:show]
+  resources :users, :only => [:show, :edit]
 
   devise_scope :user do
     authenticated  do

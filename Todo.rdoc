@@ -3,10 +3,11 @@
 1. Set up mutual friend requests √
 	- http://itsdn.co/mutual-friendship-rails √
 	- Don't forget to change git branch √
-1.2 Set up views so we can test mutual relationships
+1.2 Set up views so we can test mutual relationships √
+		-- Missing remove function
 	- Generate devise views √
 	- Make an 'add friend button on user show page' √
-		- Use Jbuilder to set up ajax response for dynamic add.
+		- Use Jbuilder/UJS to set up ajax response for dynamic add.
 			- Flash. used as an alternative?
 	- Set up notification area (essentially activating friend requests icon) √
 	- Generate User controller with show action √
