@@ -1,3 +1,15 @@
-<button type="button" id="friendsNotification" data-toggle="dropdown" aria-expanded="true">
-	<i class="fa fa-bell"><div class="<%= 'true' if FriendRequest.where(friend: current_user).count > 0 %>"><%= FriendRequest.where(friend: current_user).count %></div></i>
-</button>
+<div class="dropdown">
+  <button class="btn btn-primary" type="button" id="friendsNotification" data-toggle="dropdown" aria-expanded="true">
+	<i class="fa fa-bell"><div class="<%= 'true' if @incoming.count > 0 %>"><%= @incoming.count %></div></i>
+	</button>
+  <ul class="dropdown-menu">
+  	<li> <%= link_to "View all friends", friends_index_path  %> </li>
+  	Indsæt en eller anden form for loop igennem alle friends og for hver friend id et friend id name
+
+    <% @incoming.each do |friendrequest| %>
+    <li><%= friendrequest.id %></li>
+    <%= link_to "Accept", friend_friend_requests_path(@friend_request), method: 'patch' %>
+    <% end %>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+</div>

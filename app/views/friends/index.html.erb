@@ -1,2 +1,9 @@
 <h1>Friends#index</h1>
-<p>Find me in app/views/friends/index.html.erb</p>
+<p>You are currently friends with:</p>
+<% @friends.each do |friend|  %>
+<ul>
+
+<li><%= friend.id %> | <%= link_to "Remove this friend?", friends_destroy_path(friend_id), method: 'delete' %> </li>
+</ul>
+
+<% end %>

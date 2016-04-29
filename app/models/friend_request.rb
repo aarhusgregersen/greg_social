@@ -9,7 +9,7 @@ class FriendRequest < ActiveRecord::Base
   validate :not_pending
   validate :not_self
 
-  def accept
+   def accept
     user.friends << friend
     destroy
   end

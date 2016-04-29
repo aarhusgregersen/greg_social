@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get 'friends/index'
-  get 'friends/destroy'
+  delete 'friends/destroy'
 
   resources :friend do
     resources :friend_requests, :except => [:show, :edit]

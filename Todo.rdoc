@@ -10,10 +10,9 @@
 			- Flash. used as an alternative?
 	- Set up notification area (essentially activating friend requests icon) √
 	- Generate User controller with show action √
-	- Set up action in routes
-		- http://stackoverflow.com/questions/7086583/creating-a-users-show-page-using-devise
+	- Set up action in routes √
 2. Populate database with Faker gem so we can start testing √
-3. Set up a navbar for the site, with icons for friend requests
+3. Set up a navbar for the site, with icons for friend requests √
 5. Set up the classical facebook timeline as the frontpage
 	- May have to consider caching data entries in the view for this one
 6. Set up profiles that users can access and edit
@@ -37,6 +36,7 @@
 1. Add username to user table
 1.2 Add profile as nested attributse for user model
 2. Move logic from _notifications view to a controller or model in which the method gets called
+	- "You should implement a `friend_requests_count` method in the `User` model. In that method, count the friend requests with `FriendRequest.where(friend: self)` (self will be the user on which the method is called). Now you can use `current_user.friend_requests_count'"
 
 
 == Extra credits / Least important
