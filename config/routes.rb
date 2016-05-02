@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :posts
   get 'friends/index'
   delete 'friends/destroy'
 
@@ -7,13 +8,12 @@ Rails.application.routes.draw do
     resources :friend_requests, :except => [:show, :edit]
   end
 
-  resources :testpages
   devise_for :users
   resources :users, :only => [:show, :edit]
 
   devise_scope :user do
     authenticated  do
-      root to: 'testpages#index', as: 'authenticated_user_root'
+      root to: 'posts#index', as: 'authenticated_user_root'
     end
     unauthenticated do
       root to: 'devise/sessions#new', as: 'unauthenticated_user_root'
