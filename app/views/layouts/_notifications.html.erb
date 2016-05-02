@@ -6,8 +6,8 @@
   	Indsæt en eller anden form for loop igennem alle friends og for hver friend id et friend id name
 
     <% @incoming.each do |friendrequest| %>
-    <li><%= friendrequest.id %></li>
-    <%= link_to "Accept", friend_friend_requests_path(@friend_request), method: 'patch' %>
+      <li><%= friendrequest.id %></li>
+      <%= link_to "Accept", friend_friend_requests_path(@friend_request), method: 'patch' %>
     <% end %>
     <li><a href="#">JavaScript</a></li>
   </ul>

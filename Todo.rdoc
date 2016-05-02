@@ -17,8 +17,12 @@
 
 5. Set up the classical facebook timeline as the frontpage
 	- Generate scaffold or model for posts √
+	- Show users own post
+	- Friends posts
+	- Sort after most recent
 	- May have to consider caching data entries in the view for this one
 6. Set up profiles that users can access and edit
+	- Create edit page √
 	- Each user has one profile and can access it through the normal edit actions
 	- Don't forget to enable profile pictures
 	- Start off with using gravatar and then eventually use paperclip
