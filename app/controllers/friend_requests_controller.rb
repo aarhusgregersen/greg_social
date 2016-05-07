@@ -12,7 +12,7 @@ class FriendRequestsController < ApplicationController
     @friend_request = current_user.friend_requests.new(friend: friend)
     if @friend_request.save
       render :show, status: :created, location: @friend_request
-      flash.now[:notice] = "Friend request succesfully sent!"
+      flash.now[:success] = "Friend request succesfully sent!"
     else
       render json: @friend_request.errors, status: :unprocessable_entity
       flash.now[:error] = "There was an error saving friend"

@@ -17,6 +17,7 @@
 
 5. Set up the classical facebook timeline as the frontpage
 	- Generate scaffold or model for posts √
+		- Association for users needs to be created on database level, so posts know they belong to a user
 	- Show users own post
 	- Friends posts
 	- Sort after most recent
@@ -44,6 +45,7 @@
 1.2 Add profile as nested attributse for user model
 2. Remove friend button does not work because parameter is wrong (somehow needs to reference the friend)
 3. When user is not logged in the before filter from application controller bugs out (cause no curent_user is set)
+4. Cancan not working as intended: Users can by-pass login screen
 
 TEST TEST TEST
 
