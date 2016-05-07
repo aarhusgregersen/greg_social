@@ -14,3 +14,7 @@
 								password: 							password,
 								password_confirmation: 	password)
 end
+
+User.create( 	email: "marting12@live.dk",
+							password: "hejhej123",
+							password_confirmation: "hejhej123")

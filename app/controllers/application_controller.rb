@@ -9,8 +9,10 @@ class ApplicationController < ActionController::Base
   before_filter :assign_header_methods
 
   def assign_header_methods
-    @incoming = FriendRequest.where(friend: current_user)
-    @outgoing = current_user.friend_requests
+    if user_signed_in?
+      @incoming = FriendRequest.where(friend: current_user)
+      @outgoing = current_user.friend_requests
+    end
   end
 
 end

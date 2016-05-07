@@ -43,6 +43,9 @@
 1. Add username to user table
 1.2 Add profile as nested attributse for user model
 2. Remove friend button does not work because parameter is wrong (somehow needs to reference the friend)
+3. When user is not logged in the before filter from application controller bugs out (cause no curent_user is set)
+
+TEST TEST TEST
 
 
 == Extra credits / Least important

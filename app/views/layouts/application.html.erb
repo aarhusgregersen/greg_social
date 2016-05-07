@@ -8,9 +8,16 @@
 </head>
 <body>
 
+
 <% if user_signed_in? %>
-<%= render 'layouts/navbar' %>
+	<%= render 'layouts/navbar' %>
 <% end %>
+
+<div class="container">
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+</div>
 
 <%= yield %>
 
