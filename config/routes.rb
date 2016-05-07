@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :posts
   get 'friends/index'
   delete 'friends/destroy'
 
