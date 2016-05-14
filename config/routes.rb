@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :posts
   get 'friends/index'
   delete 'friends/destroy'
 
-  resources :friend do
-    resources :friend_requests, :except => [:show, :edit]
-  end
+  resources :friend_requests, :except => [:show, :edit]
 
   devise_for :users
   resources :users, :only => [:show, :edit]

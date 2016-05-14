@@ -1,13 +1,14 @@
   <button class="btn btn-primary" type="button" id="friendsNotification" data-toggle="dropdown" aria-expanded="true">
-	<i class="fa fa-bell"><div class="<%= 'true' if @incoming.count > 0 %>"><%= @incoming.count %></div></i>
+	<i class="fa fa-bell"><div class="<%= 'true' if @incoming.count > 0 %>"><%= link_to @incoming.count %></div></i>
 	</button>
   <ul class="dropdown-menu">
   	<li> <%= link_to "View all friends", friends_index_path  %> </li>
-  	Indsæt en eller anden form for loop igennem alle friends og for hver friend id et friend id name
 
     <% @incoming.each do |friendrequest| %>
-      <li><%= friendrequest.id %></li>
-      <%= link_to "Accept", friend_friend_requests_path(@friend_request), method: 'patch' %>
+      <li><%= friendrequest.user_id %></li>
+      <% # Indsæt en linje for at hente gravatar/avatar fra friendrequest(anden parten) %>
+      <%= link_to "Accept", friend_request_path(friendrequest.id), method: 'patch', remote: true %>
+      <%= link_to "Decline", friend_request_path(friendrequest.id), method: 'delete', remote: true %>
     <% end %>
     <li><a href="#">JavaScript</a></li>
   </ul>
