@@ -14,6 +14,7 @@
 	- Set up action in routes √
 2. Populate database with Faker gem so we can start testing √
 3. Set up a navbar for the site, with icons for friend requests √
+4. Set up profiles for users
 
 5. Set up the classical facebook timeline as the frontpage
 	- Generate scaffold or model for posts √
