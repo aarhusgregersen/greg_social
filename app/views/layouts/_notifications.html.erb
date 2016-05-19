@@ -7,7 +7,6 @@
 	</button>
   <ul class="dropdown-menu">
   	<li> <%= link_to "View all friends", friends_index_path  %> </li>
-
     <% @incoming.each do |friendrequest| %>
       <li><%= friendrequest.user_id %></li>
       <% # Indsæt en linje for at hente gravatar/avatar fra friendrequest(anden parten) %>

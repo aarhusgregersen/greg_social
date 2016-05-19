@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'friends/index'
   delete 'friends/destroy'
 
+
   resources :friend_requests, :except => [:show, :edit]
 
   devise_for :users

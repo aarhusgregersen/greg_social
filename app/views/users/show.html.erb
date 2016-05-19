@@ -5,5 +5,5 @@
 <p>This user is currently one out of <b><%= @all.count %></b> users</p>
 
 <% unless current_user == @user %>
-	<%= link_to 'Add friend!', friend_friend_requests_path(@user.id), method: 'post', remote: true %>
+	<%= link_to 'Add friend!', friend_request_path(@user), method: 'post', remote: true %>
 <% end %>

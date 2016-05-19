@@ -15,13 +15,16 @@
 2. Populate database with Faker gem so we can start testing √
 3. Set up a navbar for the site, with icons for friend requests √
 4. Set up profiles for users
+	- http://stackoverflow.com/questions/4307743/profile-model-for-devise-users
+
 
 5. Set up the classical facebook timeline as the frontpage
 	- Generate scaffold or model for posts √
 		- Association for users needs to be created on database level, so posts know they belong to a user √
-	- Show users own post
-	- Friends posts
-	- Sort after most recent
+	- Show ALL posts √
+		- Show users own post
+		- ONLY show friends posts (not all users)
+	- Sort after most recent √
 	- May have to consider caching data entries in the view for this one
 6. Set up profiles that users can access and edit
 	- Create edit page √
