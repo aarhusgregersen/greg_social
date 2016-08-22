@@ -1,5 +1,7 @@
 == To-do list / Goals
 
+Add 'guest user' to application controller and use it as an additional check for conditionals to quick fix errors from Devise
+
 1. Set up mutual friend requests √
 	- http://itsdn.co/mutual-friendship-rails √
 	- Don't forget to change git branch √

@@ -8,8 +8,9 @@
 
 50.times do |n|
 	name = Faker::Name.name
-	email = "example-#{n+1}@facebooktest.org"
+	email = "ex-#{n+1}@test.nu"
 	password = "password"
+  
 	User.create!(	email: email,
 								password: 							password,
 								password_confirmation: 	password)
